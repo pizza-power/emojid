@@ -39,13 +39,30 @@ func main() {
 	_ = id.IsZero()
 
 	// Parse & validate
-	parsed, _ := emojid.Parse(s)
+	_, _ = emojid.Parse(s)
 	_ = emojid.Validate("😀😃😄😁😆😅😂🤣-😊😇🙂🙃-😉😌😍🥰-😘😗😙😚-😋😛😝😜🤪🤨🧐🤓😎🥳😤😡")
 	_ = emojid.MustParse(s)
 
 	// Custom alphabet
 	id, _ = emojid.NewWithAlphabet(emojid.DefaultAlphabet)
-	parsed, _ = emojid.ParseWithAlphabet(s, emojid.DefaultAlphabet)
+	_, _ = emojid.ParseWithAlphabet(s, emojid.DefaultAlphabet)
+	
+}
+```
+
+or to simply print an emoji ID
+
+```go
+package main
+
+import (
+	"fmt"
+	"github.com/pizza-power/emojid"
+)
+
+func main() {
+	s := emojid.MustNewString()
+	fmt.Println(s)
 }
 ```
 
