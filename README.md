@@ -8,6 +8,15 @@ UUID-shaped IDs made of emojis. Format: `8-4-4-4-12` (32 emojis + 4 dashes).
 go get github.com/pizza-power/emojid@v0.1.0
 ```
 
+## Example
+
+From the repo root, run the example to print a new emoji ID to the terminal:
+
+```bash
+cd example
+go run .
+```
+
 ## Usage
 
 ```go
